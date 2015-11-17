@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>mtsmfm blog</title>
+  <subtitle>mtsmfm blog</subtitle>
+  <id>http://mtsmfm.github.io/</id>
+  <link href="http://mtsmfm.github.io/"/>
+  <link href="http://mtsmfm.github.io/feed.xml" rel="self"/>
+  <updated>2015-10-22T00:00:00+09:00</updated>
+  <author>
+    <name>mtsmfm</name>
+  </author>
+  <entry>
+    <title>ESM オフラインリアルタイムどう書くを開催しました</title>
+    <link rel="alternate" href="http://mtsmfm.github.io/2015/10/22/esm-doukaku.html"/>
+    <id>http://mtsmfm.github.io/2015/10/22/esm-doukaku.html</id>
+    <published>2015-10-22T00:00:00+09:00</published>
+    <updated>2015-11-17T09:33:53+09:00</updated>
+    <author>
+      <name>mtsmfm</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="https://yhpg.doorkeeper.jp"&gt;オフラインリアルタイムどう書く&lt;/a&gt; という、
+&lt;a href="https://twitter.com/Nabetani"&gt;@Nabetani&lt;/a&gt; さん主催のイベントを模したものを
+&lt;a href="http://agile.esm.co.jp"&gt;ESM&lt;/a&gt; の社内イベントとして行いました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://gist.github.com/mtsmfm/4b8ffb53ffac055f5843"&gt;問題はこちら&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;開催の経緯&lt;/h2&gt;
+
+&lt;p&gt;オフラインリアルタイムどう書くは &lt;a href="https://twitter.com/Nabetani"&gt;@Nabetani&lt;/a&gt; さんが当日出題した問題を 1 時間で解いて、解けたり解けなかったりした結果を互いに発表する、というイベントです。
+過去に何回か参加し、なかなかにおもしろいのでこういうのを社内でも次は出題者としてやってみたいなぁと思っていました。&lt;/p&gt;
+
+&lt;p&gt;一方、ESM では 60 min という、ハンズオンなどを有志が開催して都合がつく人が参加する 1 時間イベントがあります。
+相談してみたところ拡大版ということで 180 min ほどいただくことができたので、10/22 (木) に開催しました。&lt;/p&gt;
+
+&lt;h2&gt;問題づくり&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/mattsan"&gt;@mattsan&lt;/a&gt; に問題作りに協力していただきつつ、
+どう書くの問題を見たり、&lt;a href="http://d.hatena.ne.jp/torazuka/20140512/doukaku"&gt;@torazuka さんの記事&lt;/a&gt; を読んだりしながら問題を考えていました。&lt;/p&gt;
+
+&lt;h2&gt;当日の流れ&lt;/h2&gt;
+
+&lt;p&gt;問題の形式やタイムテーブルなど、大部分をオフラインどう書くの内容をほぼそのまま真似させていただきました。&lt;/p&gt;
+
+&lt;p&gt;gist の方には 「終わったら gist に URL コメントしてね」と書きましたが、idobata でリモートから流れを追ってる人もいたりしたので idobata 上に貼ってもらってました。&lt;/p&gt;
+
+&lt;h2&gt;結果&lt;/h2&gt;
+
+&lt;p&gt;12 人参加して時間内に解けたのが 1 人だけ (さすが &lt;a href="https://github.com/takkanm"&gt;@takkanm&lt;/a&gt; パイセン!) だったので、15 分延長したら半数くらいの方が解けた感じでした。
+(自分も別言語でリトライしたら結局 15 分延長でクリア&amp;hellip;)&lt;/p&gt;
+
+&lt;h2&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;問題を出す側になってみて感じたのは、「おもしろい問題にする」ということの難しさでした。
+当初の案では席が一直線だったのですが、自分でやってみて、解けてもなんかあまりおもしろくなかったです。
+&lt;a href="https://github.com/mattsan"&gt;@mattsan&lt;/a&gt; さんから「席を円形にする」というアイデアをもらって、試してみるとそこまで難易度が大きくあがらないのに
+解けたときになんとなくおもしろいと思えました。
+(この「なんとなく」を感じ取るのが問題を出すセンスなんですかね)&lt;/p&gt;
+
+&lt;p&gt;反省点としては、参加人数が少なかったなーというところです。
+3 時間もらうということで調整がつかず参加できなかったメンバーが少なからずいました。&lt;/p&gt;
+
+&lt;p&gt;次回には「解き方が複数ある問題にする」、「参加人数を増やすべく時間を減らす or 日付を調整する」あたりを try としてまたやれるといいなぁ。&lt;/p&gt;
+
+&lt;h2&gt;自分の実装&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/mtsmfm/4f11795ad0d1bccc9d75"&gt;Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://esa-pages.io/p/sharing/1699/posts/292/fa8d0bd9f7189b9e8a3b.html"&gt;JS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ruby だと redo が便利ですね。
+rotate してるところは自分で見返すともう読めない。&lt;/p&gt;
+
+&lt;p&gt;JS の方は ES6 とかとっさに頭から出るほど使えていないので、なにそれおいしいの状態で突撃。
+せめて coffee にすればよかったと数分後に後悔。
+どこに何人入るかが分かってもそれを 2 進数の値にするところで詰まった &amp;amp;&amp;amp; どう書くだとこんな手もあったりするんですよ〜というご紹介として 64 通り書く力技をしてみました。&lt;/p&gt;
+
+&lt;h2&gt;みんなの実装 (敬称略)&lt;/h2&gt;
+
+&lt;p&gt;ありがたいことに、後日別の言語で解き直す方や、インターネットで見かけて参加してくださる方もいらっしゃいました。&lt;/p&gt;
+
+&lt;p&gt;当日、後日と解いてくださったみなさんありがとうございました!&lt;/p&gt;
+
+&lt;p&gt;解いたのに載ってない! という方は &lt;a href="https://twitter.com/mtsmfm"&gt;@mtsmfm&lt;/a&gt; まで or &lt;a href="https://github.com/mtsmfm/mtsmfm.github.io"&gt;直接 PR&lt;/a&gt; どうぞ。&lt;/p&gt;
+
+&lt;h3&gt;当日&lt;/h3&gt;
+
+&lt;h4&gt;@takkanm&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/takkanm/17ca09fdd8eaa626c32e"&gt;Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;@mattsan&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/mattsan/6511934d510363322b95"&gt;C++&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;@fkino&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/fkino/9f9aaff42cc81356c873"&gt;C&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;@aikyo02&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/aikyo02/9ddd7b29460f429c7a35"&gt;Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;@fossamagna&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/fossamagna/ab2208f767b26c301415"&gt;JS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;後日&lt;/h3&gt;
+
+&lt;h4&gt;@Nabetani&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/Nabetani/items/e15581b45b4a569df2d6"&gt;Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;@takkanm&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/takkanm/f8822c0a97e9f1ee1a05"&gt;C&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;@mattsan&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/mattsan/2e2bcfb6ca4e298c00fe"&gt;Prolog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/mattsan/9362c647e858460c1ec4"&gt;C++&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;@narinari&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/narinari/items/204996ac13f7d84e858b"&gt;Haskell&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;@nakana&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/nakana/6227290a07e102dfbe49"&gt;Clojure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/nakana/a0d45ade0a59ad216598"&gt;C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://output.jsbin.com/qaneca"&gt;まさかのラーメン屋シミュレータ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>新年あけました</title>
+    <link rel="alternate" href="http://mtsmfm.github.io/2015/01/12/new-year.html"/>
+    <id>http://mtsmfm.github.io/2015/01/12/new-year.html</id>
+    <published>2015-01-12T17:06:00+09:00</published>
+    <updated>2015-11-17T09:13:48+09:00</updated>
+    <author>
+      <name>mtsmfm</name>
+    </author>
+    <content type="html">&lt;p&gt;あけましておめでとうございます。&lt;/p&gt;
+
+&lt;p&gt;去年はすごい Haskell 読むだけで満足しちゃった感じある。
+lazy 的な部分が Ruby でも発想として出てくるようになったのが収穫かも。&lt;/p&gt;
+
+&lt;p&gt;今年は JS かなぁ。仕事でも騙し騙し使ってる感じがしている。&lt;/p&gt;
+
+&lt;p&gt;あとは GitHub にもうちょっと草を生やしたい。
+テストを直すとか、分かりやすいところから手をつけようとしている。&lt;/p&gt;
+
+&lt;p&gt;なんか compass のテストが落ちているのが気になって PR 出してみた。
+&lt;a href="https://github.com/Compass/compass/pull/1912"&gt;compass#1912&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;listen の特定のバージョンだと &lt;code&gt;sass --watch&lt;/code&gt; が動かないせいみたい。
+そもそも listen に直接依存してないからこの gemfile 要らないと思うという提案まで書いたつもり。
+それよりもはやく 2.2 で warning 出ないようにならないかな。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Gentoo での Nexus 5 による USB テザリング</title>
+    <link rel="alternate" href="http://mtsmfm.github.io/2014/07/19/usb-tethering-nexus-5.html"/>
+    <id>http://mtsmfm.github.io/2014/07/19/usb-tethering-nexus-5.html</id>
+    <published>2014-07-19T02:48:00+09:00</published>
+    <updated>2015-11-17T09:13:48+09:00</updated>
+    <author>
+      <name>mtsmfm</name>
+    </author>
+    <content type="html">&lt;p&gt;カーネルの設定で、以下の内容にチェックを入れる。&lt;/p&gt;
+&lt;div class="highlight plaintext"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;Device Drivers
+  Network device support
+    USB Network Adapters
+       &amp;lt;*&amp;gt; Multi-purpose USB Networking Framework
+       -*-   CDC Ethernet support (smart devices such as cable modems)
+       &amp;lt;*&amp;gt;   Host for RNDIS and ActiveSync devices
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title>接続詞ステップ</title>
+    <link rel="alternate" href="http://mtsmfm.github.io/2014/02/23/cucumber-wiki-conjunction-steps.html"/>
+    <id>http://mtsmfm.github.io/2014/02/23/cucumber-wiki-conjunction-steps.html</id>
+    <published>2014-02-23T22:45:00+09:00</published>
+    <updated>2015-11-17T09:13:48+09:00</updated>
+    <author>
+      <name>mtsmfm</name>
+    </author>
+    <content type="html">&lt;p&gt;原文 : &lt;a href="https://github.com/cucumber/cucumber/wiki/Conjunction-Steps-(Antipattern)"&gt;Conjunction Steps (Antipattern)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;オンライン辞書の Merriam-Webster によれば:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;con·junc·tion :an uninflected linguistic form that joins together sentences, clauses, phrases, or words&lt;/p&gt;
+
+&lt;p&gt;文や節、熟語や単語を結ぶ、語形変化しない語学上の構造&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;これをステップでやらないでください。
+これはステップを特化や再利用しにくくします。
+そのため、 Cucumber は接続詞のためのサポート (かつ、しかし) が組込まれています。&lt;/p&gt;
+
+&lt;h2&gt;例&lt;/h2&gt;
+&lt;div class="highlight gherkin"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;&lt;span class="nf"&gt;前提&lt;/span&gt; サングラスとマスタングを持っている
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;直し方&lt;/h2&gt;
+&lt;div class="highlight gherkin"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;&lt;span class="nf"&gt;前提&lt;/span&gt; サングラスを持っている
+&lt;span class="nf"&gt;かつ&lt;/span&gt; マスタングを持っている
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;接続詞ステップが問題ない場合&lt;/h2&gt;
+
+&lt;p&gt;ときどき、シナリオを読み易くするためにいくつかのステップを 1 つにまとめたくなります。
+&lt;a href="https://github.com/cucumber/cucumber/wiki/Calling-Steps-from-Step-Definitions"&gt;ステップのステップ定義からの呼び出し&lt;/a&gt; はこれを可能にしますが、
+小さなステップを作ることであなたの作業がより簡単になります。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;ここで言う conjunction って &amp;ldquo;接続詞&amp;rdquo; だったか&amp;hellip;
+&amp;ldquo;結合したステップ&amp;rdquo; とかかと思ってたけれど辞書の引用を見て気づいた&lt;/p&gt;
+
+&lt;p&gt;あと、マスタングって車?&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>フィーチャと一対一なステップ定義(アンチパターン)</title>
+    <link rel="alternate" href="http://mtsmfm.github.io/2014/02/16/cucumber-wiki-feature-coupled-step-definitions.html"/>
+    <id>http://mtsmfm.github.io/2014/02/16/cucumber-wiki-feature-coupled-step-definitions.html</id>
+    <published>2014-02-16T15:30:00+09:00</published>
+    <updated>2015-11-17T09:13:48+09:00</updated>
+    <author>
+      <name>mtsmfm</name>
+    </author>
+    <content type="html">&lt;p&gt;原文 : &lt;a href="https://github.com/cucumber/cucumber/wiki/Feature-Coupled-Step-Definitions-(Antipattern)"&gt;Feature Coupled Step Definitions (Antipattern)&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;フィーチャと一対一なステップ定義はフィーチャやシナリオをまたいで使うことのできないステップ定義です。
+これは、ステップ定義の急増やコードの重複、そしてメンテナンスが大変になるため有害です。&lt;/p&gt;
+
+&lt;h2&gt;例&lt;/h2&gt;
+
+&lt;p&gt;架空の履歴書アプリに以下のステップがあります:&lt;/p&gt;
+&lt;div class="highlight plaintext"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5
+6
+7
+8&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;features/
++--edit_work_experience.feature
++--edit_languages.feature
++--edit_education.feature
++--steps/
+   +--edit_work_experience_steps.rb
+   +--edit_languages_steps.rb
+   +--edit_education_steps.rb
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;edit_work_experience.feature&lt;/code&gt; に次のようなシナリオがあります:&lt;/p&gt;
+&lt;div class="highlight gherkin"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;&lt;span class="kn"&gt;シナリオ&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 説明を追加する
+  &lt;span class="nf"&gt;前提&lt;/span&gt; 履歴書があり、説明の編集ページを表示している
+  &lt;span class="nf"&gt;かつ&lt;/span&gt; &lt;span class="s"&gt;"説明"&lt;/span&gt; に &lt;span class="s"&gt;"Cucumber BDD tool"&lt;/span&gt; と記入する
+  &lt;span class="nf"&gt;もし&lt;/span&gt; &lt;span class="s"&gt;"保存"&lt;/span&gt; を押す
+  &lt;span class="nf"&gt;ならば&lt;/span&gt; &lt;span class="s"&gt;"説明"&lt;/span&gt; に &lt;span class="s"&gt;"Cucumber BDD tool"&lt;/span&gt; と表示されていること
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;edit_work_experience_steps.rb&lt;/code&gt; が次のように実装されています:&lt;/p&gt;
+&lt;div class="highlight ruby"&gt;&lt;table style="border-spacing: 0"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl" style="text-align: right"&gt;&lt;pre class="lineno"&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;pre&gt;&lt;span class="err"&gt;前提&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;履歴書があり、説明の編集ページを表示している&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="vi"&gt;@employee&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Employee&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;create!&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:name&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'Sally'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="vi"&gt;@employee&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;create_cv&lt;/span&gt;
+  &lt;span class="n"&gt;visits&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"/employees/&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="vi"&gt;@employee&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;id&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;/descriptions/new"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;修正方法&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;ステップをドメインコンセプト毎にまとめます。&lt;a href="https://github.com/cucumber/cucumber/wiki/Step-Organisation"&gt;ステップのまとめ方&lt;/a&gt;を見てください。&lt;/li&gt;
+&lt;li&gt;step.rb ファイルを(フィーチャやシナリオに関連した名前ではなく)ドメインに関連した名前に変更します。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cucumber/cucumber/wiki/Conjunction-Steps-%28Antipattern%29"&gt;結合したステップ(アンチパターン)&lt;/a&gt;を独立したステップに分解します。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Cucumber wiki を訳してみた (Step Organisation)</title>
+    <link rel="alternate" href="http://mtsmfm.github.io/2014/02/12/cucumber-wiki-step-organisation.html"/>
+    <id>http://mtsmfm.github.io/2014/02/12/cucumber-wiki-step-organisation.html</id>
+    <published>2014-02-12T22:26:00+09:00</published>
+    <updated>2015-11-17T09:13:48+09:00</updated>
+    <author>
+      <name>mtsmfm</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="https://github.com/cucumber/cucumber/wiki"&gt;Cucumber wiki&lt;/a&gt; がすごくよいことを書いてあるのでちゃんと読んだほうがよい、と
+以前パイセンから教わった。
+読んだがあまり身になっている気がしないので一度しっかり訳してみようと思った。
+ステップ定義の構成についてとそのアンチパターンくらいは最低でも訳したいなぁ。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;&lt;a href="https://github.com/cucumber/cucumber/wiki/Step-Organisation"&gt;Cucumber wiki (Step Organisation)&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;あなたはどのようステップ定義ファイルに名前をつけていますか?
+また、ステップ定義には何を置いては &lt;em&gt;いけない&lt;/em&gt; のでしょう?&lt;/p&gt;
+
+&lt;p&gt;これはより良いシナリオへと導くガイドラインです。
+もしあなたがステップや全体的な記法についてよく知らないのであれば、最初に &lt;a href="https://github.com/cucumber/cucumber/wiki/Feature-Introduction"&gt;フィーチャの紹介&lt;/a&gt; を読んでください。&lt;/p&gt;
+
+&lt;h2&gt;グループ分け&lt;/h2&gt;
+
+&lt;p&gt;あなたがステップ定義ファイルにどんな名前を付けたりどのファイルにどのステップ定義を書いても、技術的には問題ありません。
+all_steps.rb というような巨大なファイルに全てのステップ定義を書くことすらできます。だらしないですが。&lt;/p&gt;
+
+&lt;p&gt;私たちは分野の概念(domain concept)毎に steps.rb ファイルを作ることをオススメします。
+例えば、主要なモデルやデータベースのテーブル毎に 1 つのファイルを持つのは大まかにはよい方法です。&lt;/p&gt;
+
+&lt;p&gt;履歴書アプリケーションでは私たちはきっと次のようなファイルを持つことになるでしょう:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;employee_steps.rb&lt;/li&gt;
+&lt;li&gt;education_steps.rb&lt;/li&gt;
+&lt;li&gt;experience_steps.rb&lt;/li&gt;
+&lt;li&gt;authentication_steps.rb&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;最初の 3 つは、いろいろなモデルの読み書き更新削除に関した、 &lt;a href="https://github.com/cucumber/cucumber/wiki/Given-When-Then"&gt;前提-もし-ならば&lt;/a&gt; 全てのステップを定義しているでしょう。
+最後の 1 つはログインやログアウトに関したステップを定義しているでしょう。&lt;/p&gt;
+
+&lt;p&gt;もしあなたがこの規則に則るならば、&lt;a href="https://github.com/cucumber/cucumber/wiki/Feature-Coupled-Step-Definitions-%28Antipattern%29"&gt;フィーチャと一対一なステップ定義群(アンチパターン)&lt;/a&gt; を避けることにもなります。&lt;/p&gt;
+
+&lt;h2&gt;ステップの状態&lt;/h2&gt;
+
+&lt;p&gt;オブジェクトの状態を &lt;code&gt;@variables&lt;/code&gt; のようにしてステップ定義中で保持することは可能ではあります。
+しかし、これはステップを密結合に、そして再利用しづらくすることに気を付けてください。
+絶対的なルールはここにはありません - 時には &lt;code&gt;@variables&lt;/code&gt; を使うこともよいでしょう。
+より長い議論については&lt;a href="http://www.mail-archive.com/rspec-users@rubyforge.org/msg06268.html"&gt;こちら&lt;/a&gt;を参照してください。&lt;/p&gt;
+</content>
+  </entry>
+</feed>
